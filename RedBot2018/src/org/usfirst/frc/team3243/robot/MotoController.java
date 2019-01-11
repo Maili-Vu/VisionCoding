@@ -98,7 +98,7 @@ public class MotoController {
 	public void setVision(boolean value, NetworkTable tx) {
 		float Kp = -0.1f;
 		float min_command = 0.05f;
-		float x = tx.getFloat(0.0);
+		float x = tx.getFloat(0.0);	//This is the line that is having errors...
 
 		NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
 

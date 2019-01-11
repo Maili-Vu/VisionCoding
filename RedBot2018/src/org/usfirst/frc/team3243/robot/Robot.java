@@ -115,7 +115,7 @@ public class Robot extends IterativeRobot {
 		MC.drive(IM.getMoveInput());
 		MC.spinnersTrashPool(IM.getMoveInput(), IM.getSpinnerTrash(), IM.getSpinnerPool());
 		MC.BBSpitter(IM.getOUTBanana(), IM.getINBanana());
-		MC.setVision(IM.getVision(), tx);
+		MC.setVision(IM.getVision(), tx);	//The line 101 in MotoController is showing errors, which makes this line show errors
 		//	MC.demWheels(IM.wheelActive(), IM.flyWheels());
 		//MC.feederSpatter(IM.feederActive(), IM.feederCalibrate());
 	}
