@@ -22,10 +22,10 @@ public class MotoController {
 	//drive method4
 	void drive(Double[] val) {
 		
-		motor1.set(-1.00*val[1]);
-		motor2.set(-1.00*val[1]);
-		motor3.set(1.00*val[5]);
-		motor4.set(1.00*val[5]);
+		motor1.set(-.70*val[1]);
+		motor2.set(-.70*val[1]);
+		motor3.set(.70*val[5]);
+		motor4.set(.70*val[5]);
 		
 		spinnerRight.set(0.85*val[3]);
 		spinnerLeft.set(-0.85*val[3]);
@@ -87,13 +87,13 @@ public class MotoController {
 	}
 	
 	//feeder method
-	void feederSpatter (boolean what, double inner) {
+	/*void feederSpatter (boolean what, double inner) {
 		if(what == true) {
-			//feeder2.set(inner);
+			feeder2.set(inner);
 		} else if(what == false) {
-			//feeder2.set(0);
+			feeder2.set(0);
 		}
-	}
+	}*/
 	
 	public void setVision(boolean value, NetworkTable tx) {
 		float Kp = -0.1f;
