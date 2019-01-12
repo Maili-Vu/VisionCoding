@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.PWMVictorSPX;
+import java.lang.reflect.Array;
 
 public class MotoController {
 
@@ -95,10 +96,10 @@ public class MotoController {
 		}
 	}*/
 	
-	public void setVision(boolean value, NetworkTable tx) {
+	public void setVision(boolean value, double x) {
 		float Kp = -0.1f;
 		float min_command = 0.05f;
-		double x = tx.getDouble(0.0);	//This is the line that is having errors...
+		//double x = tx.getDouble(0.0);	//This is the line that is having errors...
 
 		NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
 

@@ -94,6 +94,8 @@ public class Robot extends IterativeRobot {
 		SmartDashboard.putNumber("LimelightY", y);
 		SmartDashboard.putNumber("LimelightArea", area);
 		
+		MC.setVision(IM.getVision(), x);
+		
 		switch (m_autoSelected) {
 			case kCustomAuto:
 				//Autoer.autoDrive();
@@ -112,10 +114,14 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
+		double x = tx.getDouble(0.0);
+		double y = ty.getDouble(0.0);
+		double area = ta.getDouble(0.0);
+		
 		MC.drive(IM.getMoveInput());
 		MC.spinnersTrashPool(IM.getMoveInput(), IM.getSpinnerTrash(), IM.getSpinnerPool());
 		MC.BBSpitter(IM.getOUTBanana(), IM.getINBanana());
-		MC.setVision(IM.getVision(), tx);	//The line 101 in MotoController is showing errors, which makes this line show errors
+		MC.setVision(IM.getVision(), x);	//The line 101 in MotoController is showing errors, which makes this line show errors
 		//	MC.demWheels(IM.wheelActive(), IM.flyWheels());
 		//MC.feederSpatter(IM.feederActive(), IM.feederCalibrate());
 	}

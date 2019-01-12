@@ -60,14 +60,14 @@ public class InputManager {
 	
 	public boolean getOUTBanana() {
 		
-		BANA = inOne.getRawButton(6);
+		//BANA = inOne.getRawButton(6);
 		
 		return BANA;
 	}
 	//
 	public boolean getVision() {
 		
-		visionButton = inOne.getRawButton(9);
+		visionButton = inOne.getRawButton(6);
 		
 		return visionButton;
 	}
